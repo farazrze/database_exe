@@ -1,3 +1,16 @@
 from django.contrib import admin
+from testdb.models import *
 
-# Register your models here.
+
+class editdata(admin.ModelAdmin):
+    search_fields=['name']
+    list_display=['name','last_name']
+
+
+
+admin.site.register(data,editdata)
+
+
+
+
+
